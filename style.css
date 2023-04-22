@@ -44,6 +44,7 @@ main {
 }
 
 .title {
+    margin-top: 200px;
     font-weight: lighter;
     font-size: 50px
 }
@@ -65,4 +66,26 @@ main {
     font-size: 80px;
     animation: tr 1s;
     font-weight: bold;
+}
+
+@keyframes line {
+    from {
+        height: 10px;
+    }
+}
+
+.line {
+    height: 150px;
+    width: 3px;
+    margin-top: 200px;
+    background-color: #fff;
+    text-align: center;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    animation: line 1s;
+}
+
+.learnmore {
+    text-align: center;
 }
