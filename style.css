@@ -98,6 +98,7 @@ main {
     margin-left: auto;
     margin-right: auto;
     animation: line 1s;
+    margin: 20px;
 }
 
 .learnmore {
@@ -158,7 +159,7 @@ main {
     background-size: 100%;
     width: 680px;
     height: 680px;
-    display: block;
+    /* display: block; */
     background-position: center 0px;
     background-image: url('./56.png');
     background-position: center 0px;
