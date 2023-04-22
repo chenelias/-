@@ -131,9 +131,10 @@ main {
         background-position: center -6120px;
     }
 } */
-@keyframes move {
-    
+@keyframes blur {
+    from {opacity: 0;}
 }
+
 .homeimg {
     background-size: 100%;
     width: 680px;
@@ -145,14 +146,16 @@ main {
     /* filter: grayscale(); */
     margin-left: auto;
     margin-right: auto;
-    /* animation: move 10s infinite; */
+    animation: blur 4s;
     /* position: fixed; */
 }
-.page{
+
+.page {
     height: 100vh;
 }
-.people{
+
+.people {
     text-decoration: #ff8e10 wavy underline;
-    font-weight: 
-    bold;
+    font-weight:
+        bold;
 }
