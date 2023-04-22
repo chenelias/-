@@ -179,3 +179,7 @@ main {
     font-weight:
         bold;
 }
+.contact{
+    height: 100vh;
+    /* background-color: #fff; */
+}
