@@ -10,6 +10,8 @@
 body {
     background-color: #000;
     color: #fff;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 @keyframes site {
@@ -34,7 +36,7 @@ nav {
 }
 
 #logo:hover {
-    height: 90px;
+    height: 80px;
 
 }
 
@@ -55,6 +57,45 @@ main {
     font-weight: lighter;
     font-size: 50px;
     animation: in 3s;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .title {
+        /* margin-top: 60px; */
+        font-weight: lighter;
+        font-size: 30px;
+        animation: in 3s;
+    }
+
+    @keyframes trm {
+        0% {
+            font-size: 30px;
+            font-weight: lighter;
+
+        }
+
+        30% {
+            font-size: 30px;
+            font-weight: lighter;
+
+        }
+
+        100% {
+            font-size: 60px;
+        }
+    }
+
+    .title>#num {
+        color: #ff8e10;
+        font-size: 80px;
+        animation: trm 2.5s;
+        font-weight: bold;
+    }
+
+    .homeimg {
+        /* height: 200px !important; */
+    }
 }
 
 @keyframes tr {
@@ -114,42 +155,11 @@ main {
     align-items: center;
 }
 
-/* @keyframes test {
-    0% {
-        background-position: center 0px;
-    }
-    0% {
-        background-position: center -680px;
-    }
-    0% {
-        background-position: center -1360px;
-    }
-    0% {
-        background-position: center -2040px;
-    }
-    0% {
-        background-position: center -2720;
-    }
-    0% {
-        background-position: center -3400px;
-    }
-    0% {
-        background-position: center -4080px;
-    }
-    0% {
-        background-position: center -4760px;
-    }
-    0% {
-        background-position: center -5440px;
-    }
-    0% {
-        background-position: center -6120px;
-    }
-} */
-@keyframes blur {
+@keyframes opacity {
     0% {
         opacity: 0;
     }
+
     30% {
         opacity: 0;
     }
@@ -159,15 +169,12 @@ main {
     background-size: 100%;
     width: 680px;
     height: 680px;
-    /* display: block; */
     background-position: center 0px;
     background-image: url('./56.png');
     background-position: center 0px;
-    /* filter: grayscale(); */
     margin-left: auto;
     margin-right: auto;
-    animation: blur 6s;
-    /* position: fixed; */
+    animation: opacity 6s;
 }
 
 .page {
@@ -179,7 +186,8 @@ main {
     font-weight:
         bold;
 }
-.contact{
+
+.contact {
     height: 100vh;
     /* background-color: #fff; */
 }
