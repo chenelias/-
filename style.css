@@ -16,7 +16,24 @@ body {
     margin: 0px;
     /* border: 1px solid #ff8e10; */
 }
-
+/* disable section and drag */
+svg,img{
+	 user-select:none; /* standard syntax */
+  -webkit-user-select:none; /* for Chrome、Safari */
+  -moz-user-select:none; /* for Mozilla、Firefox */
+}
+.cup-wrap{
+	user-select: none;
+	-webkit-user-select:none;
+	-moz-user-select: none;
+}
+*{
+	-webkit-user-drag: none;
+-khtml-user-drag: none;
+-moz-user-drag: none;
+-o-user-drag: none;
+user-drag: none;
+}
 /* disble auto wide */
 .content-section {
     max-width: 1200px !important;
@@ -34,11 +51,11 @@ body {
     }
 }
 
-nav {
-    padding: 5px;
-    text-align: center;
-    height: 100px;
-    align-items: center;
+nav{
+	text-align: center;
+/* height: 100px; */
+	z-index:600;
+	position: relative;
 }
 
 #logo {
@@ -164,7 +181,7 @@ main {
     0% {
         left: 50%;
         transform: translate(-50%, 0);
-        bottom: 200px;
+        bottom: 120px;
         z-index: -10;
 		
     }
@@ -172,14 +189,14 @@ main {
     20% {
         left: 30%;
         transform: translate(-30%, 0);
-        bottom: 0px;
+        bottom: 100px;
 
     }
 
     40% {
         left: 80%;
         transform: translate(-80%, 0);
-        bottom: 0px;
+              bottom: 100px;
     }
 
     60% {
@@ -459,6 +476,7 @@ img {
     left: 50%;
     transform: translateX(-50%);
     bottom: 50%;
+	z-index: 200;
 }
 
 .smoke,
@@ -492,7 +510,7 @@ img {
     }
 
     25% {
-        filter: blur(0px);
+        filter: blur(1px);
         transform: translateY(-10px) scale(-1, 1.05);
         opacity: 1;
     }
@@ -549,34 +567,34 @@ img {
 }
 
 @keyframes smoke3 {
-    0% {
-        filter: blur(3px);
+     0% {
+        filter: blur(5px);
         transform: translateY(0px) scale(1);
-        opacity: 0;
+        opacity: 1;
     }
 
     25% {
-        filter: blur(3px);
-        transform: translateY(-20px) scale(1.05);
+        filter: blur(8px);
+        transform: translateY(-10px) scale(1.05);
         opacity: 0.5;
     }
 
     50% {
-        filter: blur(5px);
-        transform: translateY(-40px) scale(1.1);
+        filter: blur(10px);
+        transform: translateY(-20px) scale(1.1);
         opacity: 1;
     }
 
     75% {
-        filter: blur(5px);
-        transform: translateY(-60px) scale(1.15);
+        filter: blur(10px);
+        transform: translateY(-30px) scale(1.15);
         opacity: 0.5;
     }
 
     100% {
-        filter: blur(3px);
+        filter: blur(5px);
         transform: translateY(0px) scale(1);
-        opacity: 0;
+        opacity: 1;
     }
 }
 
