@@ -579,3 +579,110 @@ img {
         opacity: 0;
     }
 }
+
+/* ------------------------------------------- */
+/* .fish{
+position: fixed;
+    bottom: 0;
+    width: 100%;
+} */
+
+svg#fish {
+  bottom: 5em;
+}
+/* Fish Animation */
+svg.fish{
+  overflow:visible;
+}
+
+@-webkit-keyframes swim
+{
+	0% {margin-left: -235px}
+	90% {margin-left: 100%;}
+	100% {margin-left: 100%;}
+}
+
+@keyframes swim
+{
+	0% {margin-left: -235px}
+	70% {margin-left: 100%;}
+	100% {margin-left: 100%;}
+}
+
+.fish{
+	transition:1s;
+	margin-left: -235px;
+	position: fixed;
+    bottom: 0px!important;
+	z-index:200;
+	animation: swim 15s;
+	-webkit-animation: swim 20s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	-webkit-animation-timing-function: linear;
+}
+
+svg #fish1,
+svg #fish2,
+svg #fish3,
+svg #fish4,
+svg #fish5,
+svg #fish6 {
+  
+    -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+/*  */
+
+/**/
+@-moz-keyframes bounce {
+  0%, 50%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -moz-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  75% {
+    -moz-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 50%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  75% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+@keyframes bounce {
+  0%, 50%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  75% {
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
