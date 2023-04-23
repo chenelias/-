@@ -295,7 +295,7 @@ main {
     margin-right: auto;
     padding: 20px;
 }
-
+.post-1,.post-2,.post-3{padding: 20px;}
 .cupimg {
     background-size: 100%;
     width: 850px;
