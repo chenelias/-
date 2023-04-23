@@ -21,7 +21,7 @@
 	<main>
 		<h1>404</h1>
 		<p style="font-weight: lighter;font-size: 50px;">不存在的頁面</p>
-		<a href="/">回到首頁</a>
+		<a class="backtohome" href="/">回到首頁</a>
 	</main>
 
 </body>
@@ -40,7 +40,7 @@
 		color: #ff8e10;
 	}
 
-	a {
+	.backtohome {
 		text-decoration: none;
 		font-size: 25px;
 		font-weight: normal;
@@ -48,11 +48,12 @@
 		padding: 6px;
 		transition: 0.5s;
 		border: #ff8e10 solid 1px;
+		border-radius: 10px;
+		color: #fff;
 	}
 
-	a:hover {
+	.backtohome:hover {
 		background-color: #ff8e10;
-		border-radius: 10px;
 	}
 </style>
 
