@@ -166,7 +166,7 @@ main {
         transform: translate(-50%, 0);
         bottom: 200px;
         z-index: -10;
-
+		
     }
 
     20% {
@@ -254,7 +254,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
 }
 
 .container>div>h1 {
@@ -303,7 +302,6 @@ main {
     height: 850px;
     background-position: center 0px;
     background-image: url('./59.png');
-    background-position: center 0px;
     position: relative;
     left: 50%;
     transform: translate(-50%, 0);
@@ -358,7 +356,7 @@ footer {
 .waves {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 250px;
     margin-bottom: -10px;
     filter: grayscale(50%);
     /* filter: blur(0.2px); */
@@ -441,11 +439,22 @@ footer {
 }
 
 /* smoke effect start here */
+
+@keyframes smokeopacity{
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
 img {
     max-width: 100%;
 }
 
 .smoke-wrap {
+	transition: 1s;
+	animation: smokeopacity 6s;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
