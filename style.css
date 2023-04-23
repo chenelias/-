@@ -205,11 +205,20 @@ main {
         bottom: 0px;
     }
 
+    97% {
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: -10;
+        bottom: 0px;
+        animation-delay: 0.5s;
+    }
+
     100% {
         left: 50%;
         transform: translate(-50%, 0);
         z-index: -10;
-        bottom: -50vh;
+        bottom: -100vh;
+        animation-delay: 0.5s;
     }
 
 
@@ -263,10 +272,7 @@ main {
     align-items: left;
 }
 
-.container-4 {
-    /* background-color: #ff8e10; */
-    height: 40vh !important;
-}
+
 
 .post-1 {
     text-align: right;
@@ -283,15 +289,12 @@ main {
     max-width: 500px;
 }
 
-.post-4 {
-    width: auto;
-    margin-right: 20px;
+.final-post {
     text-align: center;
-    z-index: 200;
-    margin-left: 20px;
-    /* position: relative; */
-    position: relative;
-    /* bottom: -50px; */
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
 }
 
 .cupimg {
@@ -358,7 +361,7 @@ footer {
     height: 500px;
     margin-bottom: -10px;
     filter: grayscale(50%);
-    filter: blur(2px);
+    /* filter: blur(0.2px); */
 }
 
 .content {
@@ -385,7 +388,7 @@ footer {
 }
 
 .parallax>use:nth-child(3) {
-    animation-delay: -4s;
+    animation-delay: -4.4s;
     animation-duration: 13s;
 }
 
@@ -407,8 +410,7 @@ footer {
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
     .waves {
-        height: 40px;
-        min-height: 40px;
+        height: 100px;
     }
 
     .content {
@@ -430,11 +432,141 @@ footer {
 }
 
 ::-webkit-scrollbar-thumb {
-      background: #444;
+    background: #444;
     border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-
     background: #333;
+}
+
+/* smoke effect start here */
+img {
+    max-width: 100%;
+}
+
+.smoke-wrap {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50%;
+}
+
+.smoke,
+.smoke2,
+.smoke3 {
+    filter: blur(5px);
+    transform-origin: 50% 50%;
+}
+
+.smoke {
+    animation: smoke1 3s linear infinite;
+    animation-delay: 0.5s;
+}
+
+.smoke2 {
+    animation: smoke2 3s linear infinite;
+    animation-delay: 1.5s;
+}
+
+.smoke3 {
+    width: 500px;
+    animation: smoke3 4s linear infinite;
+    animation-delay: 2.5s;
+}
+
+@keyframes smoke1 {
+    0% {
+        filter: blur(5px);
+        transform: translateY(0px) scale(-1, 1);
+        opacity: 0.5;
+    }
+
+    25% {
+        filter: blur(0px);
+        transform: translateY(-10px) scale(-1, 1.05);
+        opacity: 1;
+    }
+
+    50% {
+        filter: blur(10px);
+        transform: translateY(-20px) scale(-1, 1.1);
+        opacity: 1;
+    }
+
+    75% {
+        filter: blur(1px);
+        transform: translateY(-30px) scale(-1, 1.15);
+        opacity: 0.6;
+    }
+
+    100% {
+        filter: blur(5px);
+        transform: translateY(0px) scale(-1, 1);
+        opacity: 0.5;
+    }
+}
+
+@keyframes smoke2 {
+    0% {
+        filter: blur(3px);
+        transform: translateY(0px) scale(1);
+        opacity: 1;
+    }
+
+    25% {
+        filter: blur(3px);
+        transform: translateY(-10px) scale(1.05);
+        opacity: 0.5;
+    }
+
+    50% {
+        filter: blur(2px);
+        transform: translateY(-20px) scale(1.1);
+        opacity: 1;
+    }
+
+    75% {
+        filter: blur(5px);
+        transform: translateY(-30px) scale(1.15);
+        opacity: 0.5;
+    }
+
+    100% {
+        filter: blur(3px);
+        transform: translateY(0px) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes smoke3 {
+    0% {
+        filter: blur(3px);
+        transform: translateY(0px) scale(1);
+        opacity: 0;
+    }
+
+    25% {
+        filter: blur(3px);
+        transform: translateY(-20px) scale(1.05);
+        opacity: 0.5;
+    }
+
+    50% {
+        filter: blur(5px);
+        transform: translateY(-40px) scale(1.1);
+        opacity: 1;
+    }
+
+    75% {
+        filter: blur(5px);
+        transform: translateY(-60px) scale(1.15);
+        opacity: 0.5;
+    }
+
+    100% {
+        filter: blur(3px);
+        transform: translateY(0px) scale(1);
+        opacity: 0;
+    }
 }

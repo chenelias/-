@@ -20,9 +20,21 @@
         <section class="content-section">
             <main class="home-area">
                 <div class="title-img-area">
+                    <div class="cup-wrap">
+                        <div class="smoke-wrap">
+                            <img class="smoke" src="./smoke.png" alt="smoke" />
+                        </div>
+                        <div class="smoke-wrap">
+                            <img class="smoke2" src="./smoke.png" alt="smoke" />
+                        </div>
+                        <div class="smoke-wrap">
+                            <img class="smoke3" src="./smoke.png" alt="smoke" />
+                        </div>
+                    </div>
                     <h1 class="title">
                         你知道嗎?&thinsp;全球有<span id="num">70%</span>的人<span class="people">不知道...</span>
                     </h1>
+
                     <div class="homeimg"></div>
                 </div>
             </main>
@@ -84,27 +96,24 @@
                         </p>
                     </div>
                 </div>
-                <div class="container container-4">
-                    <div class="post-4">
-                        <h1>Title</h1>
-                        <p>
-                            Eirmod sit sit iriure sanctus dolor amet iriure. Laoreet luptatum accusam ex commodo stet
-                            sed consetetur autem sea sit et dolores kasd adipiscing commodo elitr diam. Et nonumy cum
-                            labore nonumy sadipscing eos magna sanctus consequat ipsum gubergren. Eum sanctus et elitr
-                            stet no. Duo dolor iriure gubergren consetetur. Et ut erat consetetur rebum aliquip voluptua
-                            odio stet eos et. At voluptua dolore justo. Duis sed congue no kasd diam sea esse dolore no
-                            sit diam ea nulla accusam est. Ut amet sit hendrerit ut vel quis gubergren sadipscing kasd
-                            te eirmod dolores. Invidunt sadipscing amet erat ipsum at. Nonummy sea odio diam rebum
-                            nonumy gubergren vel feugiat ipsum voluptua et vero placerat tempor vero qui aliquyam minim.
-                            Amet blandit amet lorem dolor labore amet sea dolores et consequat tempor aliquyam diam at
-                            tempor vero rebum nonumy. Consequat elit clita magna et duo sadipscing lorem ipsum clita
-                            minim lorem no eirmod. No ut laoreet magna aliquyam eum. Ut eleifend amet tation invidunt
-                            invidunt luptatum amet et. No kasd est nobis tation justo lorem nonumy dolor rebum erat.
-                        </p>
-                    </div>
-                </div>
             </main>
         </section>
+        <div class="final-post">
+            <h1>Title</h1>
+            <p>
+                Eirmod sit sit iriure sanctus dolor amet iriure. Laoreet luptatum accusam ex commodo stet sed consetetur
+                autem sea sit et dolores kasd adipiscing commodo elitr diam. Et nonumy cum labore nonumy sadipscing eos
+                magna sanctus consequat ipsum gubergren. Eum sanctus et elitr stet no. Duo dolor iriure gubergren
+                consetetur. Et ut erat consetetur rebum aliquip voluptua odio stet eos et. At voluptua dolore justo.
+                Duis sed congue no kasd diam sea esse dolore no sit diam ea nulla accusam est. Ut amet sit hendrerit ut
+                vel quis gubergren sadipscing kasd te eirmod dolores. Invidunt sadipscing amet erat ipsum at. Nonummy
+                sea odio diam rebum nonumy gubergren vel feugiat ipsum voluptua et vero placerat tempor vero qui
+                aliquyam minim. Amet blandit amet lorem dolor labore amet sea dolores et consequat tempor aliquyam diam
+                at tempor vero rebum nonumy. Consequat elit clita magna et duo sadipscing lorem ipsum clita minim lorem
+                no eirmod. No ut laoreet magna aliquyam eum. Ut eleifend amet tation invidunt invidunt luptatum amet et.
+                No kasd est nobis tation justo lorem nonumy dolor rebum erat.
+            </p>
+        </div>
         <footer>
             <p>&copy;&nbsp;2023 菸屁股 - cigarette butt</p>
         </footer>
@@ -184,9 +193,8 @@
             if (window.scrollY >= last) {
                 document.querySelector('.homeimg').style.display = 'none'
             }
-            if(window.scrollY<=last){
+            if (window.scrollY <= last) {
                 document.querySelector('.homeimg').style.display = 'block'
-
             }
         })
     </script>
