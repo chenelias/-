@@ -12,6 +12,16 @@ body {
     color: #fff;
     max-width: 100%;
     overflow-x: hidden;
+    padding: 0px;
+    margin: 0px;
+    /* border: 1px solid #ff8e10; */
+}
+
+/* disble auto wide */
+.content-section {
+    max-width: 1200px !important;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @keyframes site {
@@ -53,10 +63,10 @@ main {
 }
 
 .title {
-    /* margin-top: 60px; */
     font-weight: lighter;
     font-size: 50px;
     animation: in 3s;
+    text-shadow: black 0.1em 0.1em 0.4em
 }
 
 @media only screen and (max-width: 800px) {
@@ -144,17 +154,26 @@ main {
     }
 }
 
+@keyframes wavedown {
+    to {
+        bottom: -100vh;
+    }
+}
+
 @keyframes position {
     0% {
         left: 50%;
         transform: translate(-50%, 0);
-        bottom: 130px;
+        bottom: 200px;
+        z-index: -10;
+
     }
 
     20% {
-        left: 10%;
+        left: 30%;
         transform: translate(-30%, 0);
         bottom: 0px;
+
     }
 
     40% {
@@ -167,6 +186,7 @@ main {
         left: 10%;
         transform: translate(-30%, 0);
         bottom: 0px;
+
     }
 
     80% {
@@ -174,12 +194,22 @@ main {
         transform: translate(-50%, 0);
         bottom: 130px;
         z-index: -10;
+        bottom: 0px;
+
+    }
+
+    95% {
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: -10;
+        bottom: 0px;
     }
 
     100% {
         left: 50%;
         transform: translate(-50%, 0);
         z-index: -10;
+        bottom: -50vh;
     }
 
 
@@ -187,8 +217,8 @@ main {
 
 .homeimg {
     background-size: 100%;
-    width: 680px;
-    height: 680px;
+    width: 550px;
+    height: 500px;
     background-position: center 0px;
     background-image: url('./56.png');
     background-position: center 0px;
@@ -212,30 +242,45 @@ main {
     margin: auto;
     width: auto;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.container>div>h1 {
+    font-weight: bold;
+    color: #ff8e10;
+}
+
+.container-1 {
+    justify-content: right;
+    align-items: right;
+}
+
+.container-2 {
+    justify-content: left;
+    align-items: left;
+}
+
+.container-4 {
+    /* background-color: #ff8e10; */
+    height: 40vh !important;
 }
 
 .post-1 {
-    width: 500px;
-    text-align: left;
-    z-index: 200;
-    margin-left: 40%;
-    position: relative;
+    text-align: right;
+    max-width: 500px;
 }
 
 .post-2 {
-    width: 500px;
     text-align: left;
-    z-index: 200;
-    margin-left: 20%;
-    position: relative;
+    max-width: 500px;
 }
 
 .post-3 {
-    width: 500px;
-    text-align: left;
-    z-index: 200;
-    margin-left: 40%;
-    position: relative;
+    text-align: center;
+    max-width: 500px;
 }
 
 .post-4 {
@@ -245,6 +290,8 @@ main {
     z-index: 200;
     margin-left: 20px;
     /* position: relative; */
+    position: relative;
+    /* bottom: -50px; */
 }
 
 .cupimg {
@@ -264,4 +311,130 @@ footer {
     text-align: center;
     padding: 10px;
 
+}
+
+.home-area {
+    margin: auto;
+    width: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* waves andamation start here!!! */
+/* ----------------------------------------------------------------------- */
+.waves {
+    margin: 0px;
+}
+
+.inner-header {
+    height: 200vh !important;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-bottom: -10px;
+    filter: grayscale(50%);
+    filter: blur(2px);
+}
+
+.content {
+    position: relative;
+    height: 20vh;
+    text-align: center;
+    background-color: white;
+}
+
+/* Animation */
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    .content {
+        height: 30vh;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+/* scroll */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+      background: #444;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #333;
 }
