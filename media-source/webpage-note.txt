@@ -1,0 +1,7 @@
+Name>菸屁股
+Stack>html&css&javascript
+Stack>next.js&tailwindcss
+Theme>
+BG-[#000]
+Font-[Noto Sans Traditional Chinese]
+Color-[#ff8e10]-[#000]-[#fff]

@@ -1,5 +1,6 @@
+/* import area */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500&display=swap');
-
+/* css code start here... */
 * {
     margin: none;
     padding: none;
@@ -18,7 +19,7 @@ body {
 }
 /* disable section and drag */
 svg,img{
-	 user-select:none; /* standard syntax */
+	user-select:none; /* standard syntax */
   -webkit-user-select:none; /* for Chrome、Safari */
   -moz-user-select:none; /* for Mozilla、Firefox */
 }
@@ -179,30 +180,29 @@ main {
 
 @keyframes position {
     0% {
-        left: 50%;
-        transform: translate(-50%, 0);
-        bottom: 120px;
-        z-index: -10;
-		
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+		z-index: -10;
     }
 
     20% {
         left: 30%;
         transform: translate(-30%, 0);
-        bottom: 100px;
+        /* bottom: 100px; */
 
     }
 
     40% {
         left: 80%;
         transform: translate(-80%, 0);
-              bottom: 100px;
+              /* bottom: 100px; */
     }
 
     60% {
         left: 10%;
         transform: translate(-30%, 0);
-        bottom: 0px;
+        /* bottom: 0px; */
 
     }
 
@@ -211,7 +211,7 @@ main {
         transform: translate(-50%, 0);
         bottom: 130px;
         z-index: -10;
-        bottom: 0px;
+        bottom: 80px;
 
     }
 
@@ -219,14 +219,14 @@ main {
         left: 50%;
         transform: translate(-50%, 0);
         z-index: -10;
-        bottom: 0px;
+        bottom: 60px;
     }
 
     97% {
         left: 50%;
         transform: translate(-50%, 0);
         z-index: -10;
-        bottom: 0px;
+        bottom: 50px;
         animation-delay: 0.5s;
     }
 
@@ -237,6 +237,7 @@ main {
         bottom: -100vh;
         animation-delay: 0.5s;
     }
+
 
 
 }
@@ -405,6 +406,7 @@ footer {
 .parallax>use:nth-child(3) {
     animation-delay: -4.4s;
     animation-duration: 13s;
+
 }
 
 .parallax>use:nth-child(4) {
@@ -473,22 +475,24 @@ img {
 	transition: 1s;
 	animation: smokeopacity 6s;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 50%;
+ top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 	z-index: 200;
+bottom: -500px;
 }
 
 .smoke,
 .smoke2,
-.smoke3 {
-    filter: blur(5px);
+.smoke3,
+.smoke4,.smoke5{
+    filter: blur(10kpx);
     transform-origin: 50% 50%;
 }
 
 .smoke {
     animation: smoke1 3s linear infinite;
-    animation-delay: 0.5s;
+    animation-delay: 5s;
 }
 
 .smoke2 {
@@ -499,6 +503,17 @@ img {
 .smoke3 {
     width: 500px;
     animation: smoke3 4s linear infinite;
+    animation-delay: 2.5s;
+}
+.smoke4 {
+    width: 800px;
+    animation: smoke3 4s linear infinite;
+    animation-delay: 1s;
+}
+.smoke5 {
+    width: 700px;
+	height: 1000px;
+    animation: smoke3 7s linear infinite;
     animation-delay: 2.5s;
 }
 
@@ -606,7 +621,7 @@ position: fixed;
 } */
 
 svg#fish {
-  bottom: 5em;
+  bottom: 5px;
 }
 /* Fish Animation */
 svg.fish{
@@ -631,9 +646,9 @@ svg.fish{
 	transition:1s;
 	margin-left: -235px;
 	position: fixed;
-    bottom: 0px!important;
+    bottom: -60px!important;
 	z-index:200;
-	animation: swim 15s;
+	animation: swim 20s;
 	-webkit-animation: swim 20s;
 	animation-iteration-count: infinite;
 	-webkit-animation-iteration-count: infinite;
