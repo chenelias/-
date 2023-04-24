@@ -521,8 +521,8 @@ bottom: -500px;
     animation-delay: 1s;
 }
 .smoke5 {
-    width: 700px;
-	height: 1000px;
+    width: 500px;
+	height: 800px;
     animation: smoke3 7s linear infinite;
     animation-delay: 2.5s;
 }
@@ -729,3 +729,4 @@ svg #fish6 {
     transform: translateY(-3px);
   }
 }
+/* end of css file */
