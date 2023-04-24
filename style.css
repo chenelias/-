@@ -7,7 +7,12 @@
     font-family: 'Noto Sans TC', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
-
+*::selection{
+	background-color:#A2FF9D ;
+}
+p::selection{
+	color:#000;
+}
 body {
     background-color: #000;
     color: #fff;
@@ -84,7 +89,12 @@ main {
     font-weight: lighter;
     font-size: 50px;
     animation: in 3s;
-    text-shadow: black 0.1em 0.1em 0.4em
+    text-shadow: black 0.1em 0.1em 0.4em;
+	position: absolute;
+	z-index: 600;
+	 top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 }
 
 @media only screen and (max-width: 800px) {
