@@ -189,30 +189,40 @@ transform: translate(-50%, -50%);
 }
 
 @keyframes position {
-    0% {
+       0% {
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 		z-index: -10;
+        bottom: none;
+		
+    }
+    10% {
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+		z-index: -10;
+        /* bottom: 10px; */
+		
     }
 
     20% {
         left: 30%;
         transform: translate(-30%, 0);
-        /* bottom: 100px; */
+        /* bottom: 20px; */
 
     }
 
     40% {
         left: 80%;
-        transform: translate(-80%, 0);
-              /* bottom: 100px; */
+        transform: translate(-30%, 0);
+              /* bottom: 20px; */
     }
 
     60% {
         left: 10%;
         transform: translate(-30%, 0);
-        /* bottom: 0px; */
+        /* bottom: 20px; */
 
     }
 
@@ -221,7 +231,7 @@ transform: translate(-50%, -50%);
         transform: translate(-50%, 0);
         bottom: 130px;
         z-index: -10;
-        bottom: 80px;
+        /* bottom: 20px; */
 
     }
 
@@ -229,14 +239,14 @@ transform: translate(-50%, -50%);
         left: 50%;
         transform: translate(-50%, 0);
         z-index: -10;
-        bottom: 60px;
+        /* bottom: 20px; */
     }
 
     97% {
         left: 50%;
         transform: translate(-50%, 0);
         z-index: -10;
-        bottom: 50px;
+        /* bottom: 0px; */
         animation-delay: 0.5s;
     }
 
@@ -247,9 +257,6 @@ transform: translate(-50%, -50%);
         bottom: -100vh;
         animation-delay: 0.5s;
     }
-
-
-
 }
 
 .homeimg {
