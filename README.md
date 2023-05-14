@@ -1,2 +1,2 @@
 # cigarette-butt
-with html css javascript
+no smoking 
